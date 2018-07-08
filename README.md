@@ -1,4 +1,4 @@
-# vue-仿金东金融
+# vue-仿京东金融
 
 > A Vue.js project
 
