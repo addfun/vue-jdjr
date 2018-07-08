@@ -6,7 +6,7 @@
       </div>
       <div :class="$style.middle">
         <p :class="$style.name">{{this.user.name}}</p>
-        <p :class="$style.text" :title="this.user.text">{{this.user.text}}</p>
+        <p :class="$style.text" :title="this.user.tag">{{this.user.tag}}</p>
       </div>
       <div :class="$style.right">
         <router-link to="/">
@@ -23,7 +23,7 @@
       return {
         user: {
           name: "addfun™",
-          text: "纵有疾风起，人生不言弃！",
+          tag: "纵有疾风起，人生不言弃！",
         }
       }
     },
