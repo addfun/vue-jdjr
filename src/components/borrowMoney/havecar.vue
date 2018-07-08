@@ -84,7 +84,7 @@
         height: px2rem(32px);
         vertical-align: -5px;
         margin-right: px2rem(14px);
-        background-image: linear-gradient(top,#b08038,#d8ac55);
+        background-image: linear-gradient(180deg,#b08038,#d8ac55);
       }
     }
   }
