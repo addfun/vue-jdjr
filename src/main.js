@@ -18,5 +18,11 @@ new Vue({
 
 //全局守卫
 router.beforeEach((to,from,next)=>{
-  alert("还没有登录请先登录")
+  
+  if(to.path === '/savemoney'){
+    alert('还没有登录，清先登录！')
+    next('/members')
+  }else{
+    next()
+  }
 })
