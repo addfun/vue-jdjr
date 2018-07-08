@@ -1,0 +1,4 @@
+@function px2rem( $px ){
+  $designWidth: 640px;  //按照屏幕宽度为320px（iPhone5）的设计图
+  @return $px*320/$designWidth/20 + rem;
+}

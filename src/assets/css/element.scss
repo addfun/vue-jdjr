@@ -1,0 +1,30 @@
+@import './latout.scss';
+@import "../../assets/css/px2rem.scss";
+
+@mixin btn($size:14px, $color:#fff,$bgcolor:#f04752,$padding:5px,$radius:2px){
+  padding: px2rem($padding);
+  background-color: $bgcolor;
+  border-radius: px2rem($radius);
+  border: 1px solid $bgcolor;
+  font-size: px2rem($size);
+  color: $color;
+  text-align: center;
+  display: inline-block;
+  line-height: 1;
+}
+
+@mixin panel($bgcolor:#fff,$padding:0px,$marginTB:20px,$marginLR:0px,$height:112px,$txtPaddingTB:0px,$txtPaddingLR:32px,$color:#333,$fontSize:32px){
+  background-color: $bgcolor;
+  padding: px2rem($padding);
+  margin: px2rem($marginTB) px2rem($marginLR);
+  >h4{
+    height: px2rem($height);
+    line-height: px2rem($height);
+    padding: px2rem($txtPaddingTB) px2rem($txtPaddingLR);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: $color;
+    font-size: px2rem($fontSize);
+  }
+}
