@@ -15,3 +15,8 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+
+//全局守卫
+router.beforeEach((to,from,next)=>{
+  alert("还没有登录请先登录")
+})
