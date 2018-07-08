@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :user="user"></router-view>
+    <router-view :userData="user"></router-view>
   </div>
 </template>
 
@@ -17,8 +17,7 @@ export default {
     this.axios.get('/api/data')
         .then(function (response) {
           if(response.status === 200){
-            _this.user=response.data.data
-            console.log(_this.user)
+            _this.user=response.data.data[0]
           }
         })
         .catch(function (error) {

@@ -5,8 +5,9 @@
         <img src="../../assets/images/jd-touxiang.png" alt="">
       </div>
       <div :class="$style.middle">
-        <p :class="$style.name">{{this.user.name}}</p>
-        <p :class="$style.text" :title="this.user.tag">{{this.user.tag}}</p>
+        <p :class="$style.name" v-if="this.userData.name">{{this.userData.name}}</p>
+        <p :class="$style.namesub" v-if="!(this.userData.name)">未登录</p>
+        <p :class="$style.text" :title="this.userData.tag">{{this.userData.tag}}</p>
       </div>
       <div :class="$style.right">
         <router-link to="/">
@@ -19,16 +20,18 @@
 
 <script>
   export default {
+    props: {
+      userData: {
+        type: [Object,Array]
+      }
+    },
     data(){
       return {
-        user: {
-          name: "addfun™",
-          tag: "纵有疾风起，人生不言弃！",
-        }
+        
       }
     },
     created(){
-      console.log('ok')
+      console.log(this.userData.name)
     },
 
   }
@@ -56,7 +59,7 @@
       .middle{
         width: 47%;
         text-align: left;
-        .name{
+        .name,.namesub{
           height: px2rem(46px);
           line-height: px2rem(46px);
           margin-top: px2rem(14px);
@@ -65,6 +68,9 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+        }
+        .namesub{
+          color: #666;
         }
         .text{
           height: px2rem(28px);

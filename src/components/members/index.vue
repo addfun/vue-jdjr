@@ -1,7 +1,7 @@
 <template>
   <div class="jinronghy">
     <Heador></Heador>
-    <HeaderInform></HeaderInform>
+    <HeaderInform :userData="userData"></HeaderInform>
     <Banner></Banner>
     <InformBody></InformBody>
     <InformBottom></InformBottom>
@@ -25,6 +25,11 @@
       InformBody,
       InformBottom,
       Navbar,
+    },
+    props: {
+      userData: {
+        type: [Object, Array]
+      }
     }
   }
 </script>
