@@ -9,11 +9,9 @@
         <p :class="$style.namesub" v-if="!(this.userData.name)">未登录</p>
         <p :class="$style.text" :title="this.userData.tag">{{this.userData.tag}}</p>
       </div>
-      <div :class="$style.right">
-        <router-link to="/">
-          <p>会员福利</p>
-        </router-link>
-      </div>
+      <router-link to="/" :class="$style.right">
+        会员福利
+      </router-link>
     </div>
   </div>
 </template>
@@ -45,6 +43,7 @@
     .wrapper{
       display: flex;
       justify-content: space-between;
+      align-items: center;
       width: 100%;
       padding: px2rem(20px) px2rem(30px);
       box-sizing: border-box;
@@ -83,21 +82,19 @@
         }
       }
       .right{
-        p{
-          height: px2rem(100px);
-          line-height: px2rem(100px);
-          font-size: px2rem(28px);
-          color: #aaa;
-          &::after{
-            content: '';
-            display: inline-block;
-            width: px2rem(14px);
-            height: px2rem(24px);
-            vertical-align: middle;
-            background: url("../../assets/images/jd-mem-arrow1.png") center no-repeat;
-            background-size: cover;
-            margin-left: px2rem(20px);
-          }
+        height: px2rem(60px);
+        line-height: px2rem(60px);
+        font-size: px2rem(28px);
+        color: #aaa;
+        &::after{
+          content: '';
+          display: inline-block;
+          width: px2rem(14px);
+          height: px2rem(24px);
+          vertical-align: middle;
+          background: url("../../assets/images/jd-mem-arrow1.png") center no-repeat;
+          background-size: cover;
+          margin-left: px2rem(20px);
         }
       }
     }
